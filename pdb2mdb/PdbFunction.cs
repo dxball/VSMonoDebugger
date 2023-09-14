@@ -28,9 +28,7 @@ namespace Microsoft.Cci.Pdb {
     internal PdbScope[] scopes;
     internal PdbLines[] lines;
     internal ushort[]/*?*/ usingCounts;
-    internal IEnumerable<INamespaceScope>/*?*/ namespaceScopes;
     internal string/*?*/ iteratorClass;
-    internal List<ILocalScope>/*?*/ iteratorScopes;
 
     private static string StripNamespace(string module) {
       int li = module.LastIndexOf('.');
@@ -336,13 +334,11 @@ namespace Microsoft.Cci.Pdb {
     private void ReadIteratorLocals(BitAccess bits) {
       uint numberOfLocals;
       bits.ReadUInt32(out numberOfLocals);
-      this.iteratorScopes = new List<ILocalScope>((int)numberOfLocals);
       while (numberOfLocals-- > 0) {
         uint ilStartOffset;
         uint ilEndOffset;
         bits.ReadUInt32(out ilStartOffset);
         bits.ReadUInt32(out ilEndOffset);
-        this.iteratorScopes.Add(new PdbIteratorScope(ilStartOffset, ilEndOffset-ilStartOffset));
       }
     }
 

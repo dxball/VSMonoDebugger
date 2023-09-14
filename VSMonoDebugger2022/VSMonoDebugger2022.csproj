@@ -137,18 +137,6 @@
       <HintPath>Mono.Debugging.Soft\ICSharpCode.NRefactory.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Mono.Cecil">
-      <HintPath>Mono.Debugging.Soft\Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil.Mdb">
-      <HintPath>Mono.Debugging.Soft\Mono.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil.Pdb">
-      <HintPath>Mono.Debugging.Soft\Mono.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil.Rocks">
-      <HintPath>Mono.Debugging.Soft\Mono.Cecil.Rocks.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Debugger.Soft">
       <HintPath>Mono.Debugging.Soft\Mono.Debugger.Soft.dll</HintPath>
     </Reference>
@@ -176,6 +164,9 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.0.32112.339" ExcludeAssets="runtime" />
     <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.3.2093" />
+    <PackageReference Include="Mono.Cecil">
+      <Version>0.11.4</Version>
+    </PackageReference>
     <PackageReference Include="NLog">
       <Version>5.0.4</Version>
     </PackageReference>
